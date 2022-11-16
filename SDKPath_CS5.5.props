@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <ID_SDK_DIR>c:\Program Files (x86)\Adobe\Adobe InDesign CS5.5 SDK</ID_SDK_DIR>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="ID_SDK_DIR">
+      <Value>$(ID_SDK_DIR)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

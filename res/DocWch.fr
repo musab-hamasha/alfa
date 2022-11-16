@@ -1,0 +1,368 @@
+#include "ActionDef.fh"
+#include "ActionDefs.h"
+#include "ActionID.h"
+#include "AdobeMenuPositions.h"
+#include "BuildNumber.h"
+#include "CommandID.h"
+#include "DocumentID.h"
+#include "LocaleIndex.h"
+#include "MenuDef.fh"
+#include "ObjectModelTypes.fh"
+#include "PMLocaleIds.h"
+#include "ShuksanID.h"
+#include "StringTable.fh"
+#include "WorkspaceID.h"
+#include "WidgetID.h"
+#include "AppUIID.h"
+#include "SplineID.h"
+#include "GenericID.h"
+#include "LayoutUIID.h"
+#include "DragDropID.h"
+#include "SDKDef.h"
+#include "XMLParserID.h"
+#include "../src/DocWchID.h"
+#include "../src/DocumentUIID.h"
+#include  <PlugInModel_UIAttributes.h> // kUIPlugIn, kModelPlugIn
+
+// kUIPlugIn, kModelPlugIn   -  see in resource PluginVersion...
+//
+// This field declares whether the plug-in supports model (kModelPlugIn) or user-interface
+// (kUIPlugIn) operations.  A model plug-in writes data to an InDesign document.
+// A user-interface plug-in provides a user interface.  This is also important in InDesigns
+// multi-threaded environment. Only model plug-ins are available for operations that occur on
+// background threads.
+
+#ifdef __ODFRC__
+
+//
+// Plugin version definition.
+//
+resource PluginVersion (kSDKDefPluginVersionResourceID)
+{
+	kTargetVersion,
+	kDocWchPluginID,
+	kSDKDefPlugInMajorVersionNumber, kSDKDefPlugInMinorVersionNumber, 	
+	kSDKDefHostMajorVersionNumber, kSDKDefHostMinorVersionNumber,
+	kSDKDefPersistMajorVersionNumber, kSDKDefPersistMinorVersionNumber,
+	{ kInDesignProduct },
+    { kWildFS },
+	kUIPlugIn,	
+	kPluginVersion
+};
+
+
+//
+//	Boss class definition.
+//
+resource ClassDescriptionTable(kSDKDefClassDescriptionTableResourceID)
+{{{	
+	AddIn
+	{
+		kDocBoss, 
+		kInvalidClass,
+		{
+			IID_ILOCKAREAOBSERVER, kLockAreaObserverImpl
+		}
+	};
+	
+
+    //	  to catch the "Quit" event -->  kCloseAllAndQuitCmdBoss	  	
+	AddIn 
+    { 
+       kSessionBoss, 
+       kInvalidClass, 
+       { 
+         IID_IQUITAPPLICATIONOBSERVER, kQuitApplicationObserverImpl 
+       } 
+    }
+
+// 	This boss provides the service of responding to document file actions.
+// 	It has two interfaces: one that tells InDesign what kind of service is
+// 	provided, and a second to provide the service.
+// 	@ingroup docwatch
+
+	Class 
+	{
+		kDocWchResponderServiceBoss,
+		kInvalidClass,
+		{
+			 
+// 			Identifies this boss as providing a responder service for 
+// 			multiple document actions, such as for doc open, close, etc. 
+// 			If only one service was needed, then we'd reuse an API-defined 
+// 			implementation ID listed in DocumentID.h.
+		
+			IID_IK2SERVICEPROVIDER,	kDocWchServiceProviderImpl,
+		
+// 			Performs the responder service. This implementation delivers
+// 			every service promised by the IK2ServiceProvider implementation.
+		
+			IID_IRESPONDER,	kDocWchResponderImpl,
+		}
+	},
+
+
+	Class
+	{
+		kDocWchStartupShutdownBoss,
+		kInvalidClass,
+		{
+			/** Implementation of IStartupShutdownService that installs idle task on startup */
+			IID_ISTARTUPSHUTDOWN, kDocWchStartupShutdownImpl,
+			/** Registers the service type */
+			IID_IK2SERVICEPROVIDER, kCStartupShutdownProviderImpl,
+		}
+	},
+
+	
+	/**
+	 This boss class provides the actions invoked by this plug-in's
+	 sub-menu items. It supports two interfaces: 
+	 IActionComponent and IPMPersist. We provide the implementation 
+	 for IActionComponent in DocWchActionComponent.cpp. The other
+	 default implementation is provided by the API.
+	@ingroup docwatch
+	*/
+	Class
+	{
+		kDocWchActionComponentBoss,
+		kInvalidClass,
+		{
+			/** Handles the actions from the menu. */
+			IID_IACTIONCOMPONENT, kDocWchActionComponentImpl,
+			/** Persist the state of menu across application instantiation.
+			Implementation provided by the API.*/
+			IID_IPMPERSIST, kPMPersistImpl
+		}
+	},
+
+
+	/**
+		This boss provides a kSuppressedUIService service.
+		In this case, a custom ISuppressedUI implementation
+		is provided.
+		
+		@ingroup supui
+	*/
+	Class
+	{
+		kSuppUISuppressedUIServiceBoss,
+		kInvalidClass,
+		{
+			/** Identifies the ServiceID.*/
+			IID_IK2SERVICEPROVIDER, kSuppressedUIServiceProviderImpl,
+			/** Suppresses UI*/
+			IID_ISUPPRESSEDUI, kSuppUISuppressedUIImpl
+		}
+	},
+	
+	
+	//action filter for disabling menus		
+	Class
+	{
+		kMyActionFilterBoss,
+		kInvalidClass,
+		{	
+			IID_IK2SERVICEPROVIDER, kActionFilterProviderImpl,		// from ActionID.h
+			IID_IACTIONFILTER,		kMyActionFilterImpl,			// my action filter
+			IID_IPMPERSIST,			kPMPersistImpl					// filters are persisted
+		}
+	}		
+
+   // DocFileHandler to prevent some commands ( close,save )
+   //
+    Class
+	{
+		kDocWchDocFileHandlerBoss2,
+		kDocFileHandlerBoss,	
+		//kInvalidClass
+		{	
+			IID_IDOCFILEHANDLER, kDocWchDocFileHandlerImpl,
+			IID_IDOCFILEHANDLERSHADOW, kDocFileHandlerImpl
+		}
+	}	
+	
+   	Class
+	{
+		kDragAndDropHelperBoss,
+		kInvalidClass,
+		{
+			IID_IK2SERVICEPROVIDER,		kLayoutDDTargHelperProviderImpl,
+			IID_IDRAGDROPTARGETFLAVORHELPER,	kDragAndDropHelperImpl,
+		}
+	}
+
+	AddIn
+	{
+		kIntegratorSuiteBoss,
+		kInvalidClass,
+		{
+			IID_ISELSUITE, kSelSuiteASBImpl,
+		}
+	},
+
+	AddIn
+	{
+		kLayoutSuiteBoss,
+		kInvalidClass,
+		{
+			IID_ISELSUITE, kSelSuiteCSBImpl,
+		}
+	},
+	
+	//adds an idle tasks to the session boss (for lockArea)
+	AddIn
+	{
+		kSessionBoss,
+		kInvalidClass,
+		{
+			IID_IMYIDLETASK, kMyIdleTaskImpl,
+			IID_ISAVEIDLETASK, kSaveIdleTaskImpl,
+			IID_IAPPTERMINATEIDLETASK, kAppTerminateIdleTaskImpl,
+			IID_ISAVEACOPYIDLETASK, kSaveACopyIdleTaskImpl,			// KLIM 20100329
+		}
+	},
+	
+	// SAX Content Handler service to read an XML configuration file.
+	Class
+	{
+		kXMLConfigSAXContentHandlerServiceBoss,
+		kInvalidClass,
+		{
+			IID_ISAXCONTENTHANDLER,	kXMLConfigSAXContentHandlerImpl,
+		}
+	}	
+}}};
+
+
+/*
+// Implementation definition.
+*/
+resource FactoryList (kSDKDefFactoryListResourceID) 
+{
+	kImplementationIDSpace,
+	{
+		#include "../src/DocWchFactoryList.h"
+	}
+};
+		
+
+/* 
+// Menu definition.
+*/
+resource MenuDef (kSDKDefMenuResourceID)
+{
+	{
+		// The About Plug-ins sub-menu item for this plug-in.
+		kDocWchAboutActionID,			// ActionID (kInvalidActionID for positional entries)
+#ifdef MACINTOSH		
+		"Main:AppleMenu:AboutPlugins",	// Menu Path.
+#else
+		"Main:&Help:AboutPlugins",		// Menu Path.
+#endif
+		kSDKDefAlphabeticPosition,		// Menu Position.
+		kSDKDefIsNotDynamicMenuFlag,	// kSDKDefIsNotDynamicMenuFlag or kSDKDefIsDynamicMenuFlag.
+
+	}
+};
+
+
+/*
+// Action definition.
+*/
+resource ActionDef (kSDKDefActionResourceID)
+{
+	{ 
+		kDocWchActionComponentBoss, 		// ClassID of boss class that implements the ActionID.
+		kDocWchAboutActionID,				// ActionID.
+		kAlfaSubmenuKey,					// Sub-menu string.
+		kOtherActionArea,					// Area name (see ActionDefs.h).
+		kNormalAction,						// Type of action (see ActionDefs.h).
+		kDisableIfLowMem,					// Enabling type (see ActionDefs.h).
+		kInvalidInterfaceID,				// Selection InterfaceID this action cares about or kInvalidInterfaceID.
+		kSDKDefInvisibleInKBSCEditorFlag,	// kSDKDefVisibleInKBSCEditorFlag or kSDKDefInvisibleInKBSCEditorFlag.
+				
+	}
+};
+
+
+/*
+// LocaleIndex
+// The LocaleIndex should have indicies that point at your
+// localizations for each language system that you are 
+// localized for.
+*/
+
+resource LocaleIndex (kSDKDefStringsResourceID)
+{
+	kStringTableRsrcType,
+	{
+		kWildFS, k_enUS, kSDKDefStringsResourceID + index_enUS
+		kWildFS, k_enGB, kSDKDefStringsResourceID + index_enUS
+		kWildFS, k_deDE, kSDKDefStringsResourceID + index_deDE
+		kWildFS, k_frFR, kSDKDefStringsResourceID + index_enUS
+		kWildFS, k_esES, kSDKDefStringsResourceID + index_enUS
+		kWildFS, k_ptBR, kSDKDefStringsResourceID + index_enUS
+		kWildFS, k_svSE, kSDKDefStringsResourceID + index_enUS
+		kWildFS, k_daDK, kSDKDefStringsResourceID + index_enUS
+		kWildFS, k_nlNL, kSDKDefStringsResourceID + index_enUS
+		kWildFS, k_itIT, kSDKDefStringsResourceID + index_enUS
+		kWildFS, k_fiFI, kSDKDefStringsResourceID + index_enUS
+	}
+};
+//----
+resource LocaleIndex (kSDKDefStringsNoTransResourceID)
+{
+	kStringTableRsrcType,
+	{
+		kWildFS, k_Wild, kSDKDefStringsNoTransResourceID + index_enUS
+	}
+};
+
+//========================================================================================
+// no translate strings
+//========================================================================================
+resource StringTable (kSDKDefStringsNoTransResourceID + index_enUS)
+{
+	k_enUS,									// Locale Id
+	kEuropeanMacToWinEncodingConverter,		// Character encoding converter
+	{
+		// No-Translate strings go here:	
+		kAlfaSubmenuKey,						"alfa...",
+
+	}
+};
+
+//========================================================================================
+// English strings
+//========================================================================================
+
+resource StringTable (kSDKDefStringsResourceID + index_enUS)
+{
+	k_enUS,									// Locale Id
+	kEuropeanMacToWinEncodingConverter,		// Character encoding converter
+	{
+		// ----- English strings
+
+	}
+}
+
+//========================================================================================
+// German strings
+//========================================================================================
+resource StringTable (kSDKDefStringsResourceID + index_deDE)
+{
+	k_deDE,									// Locale Id
+	kEuropeanMacToWinEncodingConverter,		// Character encoding converter
+	{
+		// ----- German strings
+
+	}
+};
+
+#endif // __ODFRC__
+
+//#include "DocWch_enUS.fr"
+//#include "DocWch_jaJP.fr"
+
+// End, DocWch.fr.

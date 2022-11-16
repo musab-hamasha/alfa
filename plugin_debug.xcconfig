@@ -1,0 +1,17 @@
+ID_BUILD_CONFIG_PLUGIN_DEBUG = YES
+
+// InDesign core library build settings (based on common build settings)
+#include "common_debug.xcconfig"
+// Common InDesign build settings shared between all debug targets
+ID_BUILD_CONFIG_COMMON_DEBUG = YES
+
+DEAD_CODE_STRIPPING = YES
+GCC_GENERATE_DEBUGGING_SYMBOLS = YES
+GCC_PREPROCESSOR_DEFINITIONS = $(GCC_PREPROCESSOR_DEFINITIONS) DEBUG
+OTHER_REZFLAGS = -d __GNUC__ -d MACINTOSH -d DEBUG 
+GCC_MODEL_TUNING = G5
+GCC_OPTIMIZATION_LEVEL = 0
+
+
+FRAMEWORK_SEARCH_PATHS = $(FRAMEWORK_SEARCH_PATHS) $(ID_SDK_ROOT)/build/mac/debug/packagefolder/contents/macos $(ID_SDK_ROOT)/build/mac/debug/packagefolder/contents/Frameworks
+LIBRARY_SEARCH_PATHS = $(LIBRARY_SEARCH_PATHS) $(ID_SDK_ROOT)/build/mac/debug/packagefolder/contents/macos/libs

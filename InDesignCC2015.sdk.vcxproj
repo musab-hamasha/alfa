@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_2015|Win32">
+      <Configuration>Debug_2015</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_2015|x64">
+      <Configuration>Debug_2015</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_2015|Win32">
+      <Configuration>Release_2015</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_2015|x64">
+      <Configuration>Release_2015</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>alfa</ProjectName>
+    <ProjectGuid>{AB60A93C-9EAC-4ED0-8511-F6055B0719EE}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="ReleaseWin32.sdk.cc2015.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="DebugWin32.sdk.cc2015.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="ReleaseX64.sdk.cc2015.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="DebugX64.sdk.cc2015.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">build\debug\SDK\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">build\objd\BasicDialog\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">..\Build\debugx64\SDK\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">..\Build\Indesign\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">build\release\SDK\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">build\objr\BasicDialog\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">c:\ASE\fo_ew\runtime\lib\win32\InDesign\CC2015\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">..\Build\Indesign\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">$(ProjectName).sdk</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">$(ProjectName).sdk</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">$(ProjectName).sdk</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">$(ProjectName)</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">.pln</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">.pln</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">.pln</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">.pln</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">
+    <ExecutablePath>C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\devtools\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">
+    <ExecutablePath>C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\devtools\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">
+    <ExecutablePath>C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\devtools\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">
+    <ExecutablePath>C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\devtools\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(IntDir)BasicDialog.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg @"SDKCPPOptionsCC2015.rsp" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DEBUG;NO_STRICT;BOOST_SYSTEM_NO_DEPRECATED;WINOS;_WINDOWS;IND_PLUGIN;CS6;CC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)alfa2015.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <AdditionalIncludeDirectories>..\common;.</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>merge_res.cmd "$(IntDir)"  BscDlg &amp; echo Deleting old resources... &amp; del /f /s "$(TargetDir)($(TargetName) Resources)\"*.idrc &gt; $(IntDir)prevDeletedResources.txt &amp; xcopy /Q /E "$(IntDir)"*.idrc "$(TargetDir)($(TargetName) Resources)\" /Y</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>$(UI_PLUGIN_LINKLIST);$(DROVER_LINKLIST);%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>build\debug\SDK\BasicDialog.pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(LIB_DIR)\BasicDialog/BasicDialog.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>restore_res.cmd "$(IntDir)"  BscDlg</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>$(IntDir)BasicDialog.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg @"SDKCPPOptionsCC2015.rsp" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;STRICT;DEBUG;BOOST_SYSTEM_NO_DEPRECATED;CS5;CS6;CC;WINOS;_WINDOWS;IND_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)alfa2015.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <AdditionalIncludeDirectories>..\common</AdditionalIncludeDirectories>
+      <Optimization>MinSpace</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>merge_res.cmd "$(IntDir)"  DocWch &amp; echo Deleting old resources... &amp; del /f /s "$(TargetDir)($(TargetName) Resources)\"*.idrc &gt; $(IntDir)prevDeletedResources.txt &amp; xcopy /Q /E "$(IntDir)"*.idrc "$(TargetDir)($(TargetName) Resources)\" /Y</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>$(UI_PLUGIN_LINKLIST);$(DROVER_LINKLIST);%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>..\build\debugx64\SDK\alfa.sdk.pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(LIB_DIR)\alfa2015/alfa2015.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>restore_res.cmd "$(IntDir)"  DocWch</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(IntDir)BasicDialog.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg @"SDKCPPOptionsCC2015.rsp" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;STRICT;NDEBUG;BOOST_SYSTEM_NO_DEPRECATED;WINOS;_WINDOWS;IND_PLUGIN;CS6;CC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)alfa2015.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <AdditionalIncludeDirectories>..\common;.</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>merge_res.cmd "$(IntDir)"  BscDlg &amp; echo Deleting old resources... &amp; del /f /s "$(TargetDir)($(TargetName) Resources)\"*.idrc &gt; $(IntDir)prevDeletedResources.txt &amp; xcopy /Q /E "$(IntDir)"*.idrc "$(TargetDir)($(TargetName) Resources)\" /Y</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalOptions>/IGNORE:4089 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>$(UI_PLUGIN_LINKLIST);$(DROVER_LINKLIST);%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>build\release\SDK\BasicDialog.pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(LIB_DIR)\BasicDialog/BasicDialog.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>restore_res.cmd "$(IntDir)"  BscDlg</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>$(IntDir)BasicDialog.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg @"SDKCPPOptionsCC2015.rsp" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;STRICT;NDEBUG;BOOST_SYSTEM_NO_DEPRECATED;CS5;CS6;CC;WINOS;_WINDOWS;IND_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)alfa2015.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <AdditionalIncludeDirectories>..\common</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <Optimization>MinSpace</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseFullPaths>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>merge_res.cmd "$(IntDir)"  DocWch &amp; echo Deleting old resources... &amp; del /f /s "$(TargetDir)($(TargetName) Resources)\"*.idrc &gt; $(IntDir)prevDeletedResources.txt &amp; xcopy /Q /E "$(IntDir)"*.idrc "$(TargetDir)($(TargetName) Resources)\" /Y
+
+rem del /f /s "$(TargetDir)($(TargetName) Resources)\"*.idrc &amp; xcopy /Q /E "$(IntDir)"*.idrc "$(TargetDir)($(TargetName) Resources)\" /Y</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalOptions>/IGNORE:4089 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>$(UI_PLUGIN_LINKLIST);$(DROVER_LINKLIST);%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>C:\ASE\fo_ew\runtime\lib\win32\InDesign\CC2015\alfa.pln</OutputFile>
+      <ProgramDatabaseFile>..\build\releasex64\SDK\alfa.pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(LIB_DIR)alfa2015/alfa2015.lib</ImportLibrary>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+    </Link>
+    <PostBuildEvent>
+      <Command>restore_res.cmd "$(IntDir)"  DocWch &amp;&amp; echo Copy PlugIn to 2014.1... &amp;&amp;  xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2014.1\runtime\lib\win32\InDesign\CC2015\($(TargetName) Resources)\" /E /Y &gt;nul &amp;&amp; xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2014.1\runtime\lib\win32\InDesign\CC2015" /Y &gt;nul &amp;&amp; echo Copy PlugIn to 2014.2... &amp;&amp; xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2014.2\runtime\lib\win32\InDesign\CC2015\($(TargetName) Resources)\" /E /Y &gt;nul &amp;&amp; xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2014.2\runtime\lib\win32\InDesign\CC2015" /Y &gt;nul &amp;&amp; echo Copy PlugIn to 2014.3... &amp;&amp; xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2014.3\runtime\lib\win32\InDesign\CC2015\($(TargetName) Resources)\" /E /Y &gt;nul &amp;&amp; xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2014.3\runtime\lib\win32\InDesign\CC2015" /Y &gt;nul &amp;&amp; echo Copy PlugIn to 2015.1... &amp;&amp; xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.1\runtime\lib\win32\InDesign\CC2015\($(TargetName) Resources)\" /E /Y &gt;nul &amp;&amp; xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.1\runtime\lib\win32\InDesign\CC2015" /Y &gt;nul &amp;&amp; echo Copy PlugIn to 2015.2... &amp;&amp; xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.2\runtime\lib\win32\InDesign\CC2015\($(TargetName) Resources)\" /E /Y &gt;nul &amp;&amp; xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.2\runtime\lib\win32\InDesign\CC2015" /Y &gt;nul &amp;&amp; echo Copy PlugIn to 2015.3... &amp;&amp; xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.3\runtime\lib\win32\InDesign\CC2015\($(TargetName) Resources)\" /E /Y &gt;nul &amp;&amp; xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.3\runtime\lib\win32\InDesign\CC2015" /Y &gt;nul &amp;&amp; echo Copy PlugIn to 2016.1... &amp;&amp; xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.1\runtime\lib\win32\InDesign\CC2015\($(TargetName) Resources)\" /E /Y &gt;nul &amp;&amp; xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.1\runtime\lib\win32\InDesign\CC2015" /Y &gt;nul &amp;&amp; echo Copy PlugIn to 2016.2... &amp;&amp; xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.2\runtime\lib\win32\InDesign\CC2015\($(TargetName) Resources)\" /E /Y &gt;nul &amp;&amp; xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.2\runtime\lib\win32\InDesign\CC2015" /Y &gt;nul &amp;&amp; echo Copy PlugIn to 2016.3... &amp;&amp; xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.3\runtime\lib\win32\InDesign\CC2015\($(TargetName) Resources)\" /E /Y &gt;nul &amp;&amp; xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.3\runtime\lib\win32\InDesign\CC2015" /Y &gt;nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\CMyStream.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\Functions.cpp" />
+    <ClCompile Include="..\common\PluginLogger.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sdk2015\PlugInStatics.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sdk2015\SDKFileHelper.cpp" />
+    <ClCompile Include="sdk2015\SDKLayoutHelper.cpp" />
+    <ClCompile Include="src\AdDocPI.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\AppQuitObserver.cpp" />
+    <ClCompile Include="src\DocMgr.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\DocResources.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\DocWchActionComponent.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\DocWchDocFileHandler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\DocWchID.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\DocWchNoStrip.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\DragAndDropHelper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\ErrorCheckingLogging.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\FrameUtils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\ImageLinkUtils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\IndComm.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\JavascriptHelper.cpp" />
+    <ClCompile Include="src\MacPathUtils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\PathAux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\PluginConfiguration.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\PluginConfigurationImpl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">Create</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">Create</PrecompiledHeader>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">false</TreatWarningAsError>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\SuppUISuppressedUI.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\TriggerResourceDeps.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\UnifiedAux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\XMLConfigSAXContentHandler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\XMLConfigurationReader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\DocWch.fr">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">odfrc $(ODFRC_ADDITIONAL_FLAGS) "%(FullPath)" -o "$(IntDir)%(Filename).fres" -d DEBUG  -i ..\..\..\source\sdksamples\basicdialog @SDKODFRCOptionsCC2015.rsp
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">$(IntDir)TriggerResourceDeps.obj;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">$(IntDir)%(Filename).fres;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">odfrc $(ODFRC_ADDITIONAL_FLAGS) "%(FullPath)" -o "$(IntDir)%(Filename).fres" -d DEBUG  -i ..\..\..\source\sdksamples\basicdialog @SDKODFRCOptionsCC2015.rsp
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">$(IntDir)TriggerResourceDeps.obj;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">$(IntDir)%(Filename).fres;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">odfrc $(ODFRC_ADDITIONAL_FLAGS) "%(FullPath)" -o "$(IntDir)%(Filename).fres"   -i ..\..\..\source\sdksamples\basicdialog   @SDKODFRCOptionsCC2015.rsp
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">$(IntDir)TriggerResourceDeps.obj;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">$(IntDir)%(Filename).fres;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">odfrc $(ODFRC_ADDITIONAL_FLAGS) "%(FullPath)" -o "$(IntDir)%(Filename).fres"   -i ..\..\..\source\sdksamples\basicdialog   @SDKODFRCOptionsCC2015.rsp
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">$(IntDir)TriggerResourceDeps.obj;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">$(IntDir)%(Filename).fres;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\DocWch.rc">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">0x0809</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug_2015|Win32'">C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\source\public\includes;..\..\..\source\sdksamples\basicdialog;C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\source\sdksamples\common;$(id_sdk_dir)\source\precomp\msvc;$(id_sdk_dir)\source\public\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">0x0809</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug_2015|x64'">C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\source\public\includes;..\..\..\source\sdksamples\basicdialog;C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\source\sdksamples\common;$(id_sdk_dir)\source\precomp\msvc;$(id_sdk_dir)\source\public\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">0x0809</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release_2015|Win32'">C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\source\public\includes;..\..\..\source\sdksamples\basicdialog;C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\source\sdksamples\common;$(id_sdk_dir)\source\precomp\msvc;$(id_sdk_dir)\source\public\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">0x0809</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release_2015|x64'">C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\source\public\includes;..\..\..\source\sdksamples\basicdialog;C:\Program Files (x86)\Adobe\Adobe InDesign CC 2015 Plugin SDK\source\sdksamples\common;$(id_sdk_dir)\source\precomp\msvc;$(id_sdk_dir)\source\public\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\CMyStream.h" />
+    <ClInclude Include="..\common\idkeys.h" />
+    <ClInclude Include="..\common\idtypes.h" />
+    <ClInclude Include="..\common\PluginLogger.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

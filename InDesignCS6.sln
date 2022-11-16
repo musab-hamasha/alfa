@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "alfa", "InDesignCS6.vcxproj", "{F07ADB1C-34E3-41F6-9BA9-D6C97E54FBD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release_CS5.5|Win32 = Release_CS5.5|Win32
+		Release_CS5|Win32 = Release_CS5|Win32
+		Release_CS6|Win32 = Release_CS6|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F07ADB1C-34E3-41F6-9BA9-D6C97E54FBD0}.Release_CS5.5|Win32.ActiveCfg = Release_CS5.5|Win32
+		{F07ADB1C-34E3-41F6-9BA9-D6C97E54FBD0}.Release_CS5.5|Win32.Build.0 = Release_CS5.5|Win32
+		{F07ADB1C-34E3-41F6-9BA9-D6C97E54FBD0}.Release_CS5|Win32.ActiveCfg = Release_CS5|Win32
+		{F07ADB1C-34E3-41F6-9BA9-D6C97E54FBD0}.Release_CS5|Win32.Build.0 = Release_CS5|Win32
+		{F07ADB1C-34E3-41F6-9BA9-D6C97E54FBD0}.Release_CS6|Win32.ActiveCfg = Release_CS6|Win32
+		{F07ADB1C-34E3-41F6-9BA9-D6C97E54FBD0}.Release_CS6|Win32.Build.0 = Release_CS6|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<VisualStudioPropertySheet 
+	ProjectType="Visual C++" 
+	Version="8.00" 
+	Name="SDKPath_CS3"
+	>
+	<UserMacro
+	Name="ID_SDK_DIR"
+	Value="C:\Program Files (x86)\Adobe\Adobe InDesign CS3 SDK"
+	/>
+</VisualStudioPropertySheet>

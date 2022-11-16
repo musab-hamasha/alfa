@@ -1,0 +1,127 @@
+
+// Common InDesign build settings shared between all projects, targets and configurations
+ID_BUILD_CONFIG_COMMON = YES
+// SDK and minimum deployment target
+SDKROOT = $(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk
+MACOSX_DEPLOYMENT_TARGET = 10.5
+MACOSX_SDKVERSION = 1050	// use to compare SDK version against constants in AvailabilityMacros.h
+
+//SDKROOT = $(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk
+//MACOSX_DEPLOYMENT_TARGET = 10.6
+//MACOSX_SDKVERSION = 1060	// use to compare SDK version against constants in AvailabilityMacros.h
+
+ARCHS = $(NATIVE_ARCH)	// by default just build for the architecture of host machine
+VALID_ARCHS = i386 x86_64 // farewell to ppc builds
+
+// Compiler version (4.0 vs 4.2 vs 4.2LLVM)
+GCC_VERSION = 4.0
+
+// Debug symbol format (dwarf vs dwarf-with-dsym vs stabs)
+DEBUG_INFORMATION_FORMAT = dwarf
+
+// InDesign Build variables
+ID_APPLICATION_TYPE = "APPL"
+ID_CREATOR = "InDn"
+IC_CREATOR = "InCp"
+ID_PLUGIN_OPTIONAL_TYPE = "InDa"
+ID_PLUGIN_REQUIRED_TYPE = "InDr"
+ID_PLUGIN_SDK_TYPE = "InD3"
+ID_PRJ_DIR = $(SRCROOT)
+ID_DIR = $(ID_PRJ_DIR)/../$(TARGET_NAME)
+ID_FUTURE_VERSION_DIR = $(ID_PRJ_DIR)/../$(TARGET_NAME)/packagefolder/contents/macos/future version
+ID_PLUGINS_DIR = $(ID_PRJ_DIR)/../$(TARGET_NAME)/plug-ins
+ID_REQUIRED_DIR = $(ID_PRJ_DIR)/../$(TARGET_NAME)/packagefolder/contents/macos/required
+ID_BUILT_SDK_SAMPLES_DIR = $(ID_PRJ_DIR)/../$(TARGET_NAME)/SDK
+ID_TESTING_DIR = $(ID_PRJ_DIR)/../$(TARGET_NAME)/packagefolder/contents/macos/testing
+ID_TOOLS_DIR = $(ID_PRJ_DIR)/../$(TARGET_NAME)/tools
+CONFIGURATION_BUILD_DIR = $(BUILT_PRODUCTS_DIR)
+ID_SDK_ROOT = /Users/Shared/Adobe/AdobeInDesignCS5SDK
+
+ID_SHARED_PRECOMPS_ROOT = $(SYMROOT)/SharedPrecompiledHeaders
+SHARED_PRECOMPS_DIR = $(ID_SHARED_PRECOMPS_ROOT)/$(TARGET_NAME)
+
+// Common include paths macros for use in any InDesign projects, including Open and SDK projects.
+
+// Just the OS headers
+OS_HEADER_SEARCH_PATHS = $(SDKROOT)/Developer/Headers/FlatCarbon
+
+// Public headers - this list is based on what was in base and plugin
+//  which means that the public/interfaces paths needed are actually in the project files,
+ID_PUBLIC_HEADER_SEARCH_PATHS = $(ID_SDK_ROOT)/source/precomp/common $(ID_SDK_ROOT)/source/precomp/msvc $(ID_SDK_ROOT)/source/precomp/gcc $(ID_SDK_ROOT)/source/public/includes  $(ID_SDK_ROOT)/source/public/interfaces/architecture $(ID_SDK_ROOT)/source/public/interfaces/utils $(ID_SDK_ROOT)/source/public/interfaces/xmedia $(ID_SDK_ROOT)/source/public/libs/widgetbin/includes
+
+// Wildcarded Public interfaces. 
+// Less efficient, but header path maintenance in our project files is a chore.
+// Unfortunately, if I use this list but don't edit all the 
+// project files to remove the duplicates it slows the debug build down by about 14%. 
+// I think we'd get most of that back after editing the projects, but I'm not ready to do that yet.
+ID_ALLPUBLIC_HEADER_SEARCH_PATHS = $(ID_SDK_ROOT)/source/precomp/common $(ID_SDK_ROOT)/source/precomp/msvc $(ID_SDK_ROOT)/source/precomp/gcc $(ID_SDK_ROOT)/source/public/includes $(ID_SDK_ROOT)/source/public/interfaces/** $(ID_SDK_ROOT)/source/public/libs/widgetbin/includes
+
+// Open headers
+// Use the wildcard here, since base was already doing that, and plugins might as well have been
+ID_OPEN_HEADER_SEARCH_PATHS = $(ID_SDK_ROOT)/source/open/includes/** $(ID_SDK_ROOT)/source/open/interfaces/** $(ID_SDK_ROOT)/source/open/libs/widgetbin/includes 
+
+// ASL/boost headers
+ASL_HEADER_SEARCH_PATHS = $(ID_SDK_ROOT)/external/asl/boost_libraries/ $(ID_SDK_ROOT)/external/asl/intel_tbb_libraries/include/ $(ID_SDK_ROOT)/external/asl/adobe_source_libraries/ 
+
+// Starting point for project header includes. No Private headers should be in here
+// They can be added in the base and plugin configs
+ID_COMMON_HEADER_SEARCH_PATHS = $(OS_HEADER_SEARCH_PATHS) $(ID_PUBLIC_HEADER_SEARCH_PATHS) $(ID_OPEN_HEADER_SEARCH_PATHS) $(ASL_HEADER_SEARCH_PATHS)
+
+//HEADER_SEARCH_PATHS is defined in the base and plugin xcconfig files
+
+ID_COMMON_REZ_SEARCH_PATHS = $(OS_HEADER_SEARCH_PATHS) $(ID_SDK_ROOT)/source/precomp/common $(ID_SDK_ROOT)/source/precomp/msvc $(ID_SDK_ROOT)/source/public/includes
+
+// GCC flags
+GCC_ENABLE_CPP_EXCEPTIONS = YES
+GCC_ENABLE_CPP_RTTI = YES
+GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES
+GCC_INLINES_ARE_PRIVATE_EXTERN = YES
+GCC_INPUT_FILETYPE = sourcecode.cpp.cpp
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+GCC_PREPROCESSOR_DEFINITIONS = $(GCC_PREPROCESSOR_DEFINITIONS) MACINTOSH MACOSX_SDKVERSION=$(MACOSX_SDKVERSION)
+GCC_SYMBOLS_PRIVATE_EXTERN = YES
+GCC_THREADSAFE_STATICS = NO
+GCC_TREAT_WARNINGS_AS_ERRORS = YES  
+GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO
+GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES
+GCC_WARN_ABOUT_RETURN_TYPE = YES
+GCC_WARN_CHECK_SWITCH_STATEMENTS = YES
+GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES
+GCC_WARN_INHIBIT_ALL_WARNINGS = NO
+GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES
+GCC_WARN_MISSING_PARENTHESES = YES
+GCC_WARN_NON_VIRTUAL_DESTRUCTOR = NO
+GCC_WARN_SHADOW = YES
+GCC_WARN_UNUSED_FUNCTION = YES
+GCC_WARN_UNUSED_LABEL = YES
+GCC_WARN_UNUSED_PARAMETER = NO
+GCC_WARN_UNUSED_VALUE = YES
+GCC_WARN_UNUSED_VARIABLE = YES
+//GCC_WARN_64_TO_32_BIT_CONVERSION = YES // Too many warnings from headers we don't own
+
+PER_ARCH_CFLAGS_i386 = -DMACTEL_SKIP
+WARNING_CFLAGS = -Wchar-subscripts -Wimplicit -Wsequence-point -Winit-self -Wmissing-field-initializers -Wpointer-arith -Wcast-align -Wpacked
+SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES
+
+// Linker Flags
+PREBINDING = NO // prebinding only useful when launching on 10.3 and earlier
+
+// plist compiler flags
+PLC_OUTPUT_CREATOR = "????" //Project specific
+PLC_OUTPUT_TYPE = "InDn" 		//Project specific
+
+PLC_INCLUDES = $(REZ_SEARCH_PATHS)  //Nearly all projects clobber this...
+
+// Misc flags
+BIB_THROW = BIB_NO_THROW
+
+
+
+// Uncomment these two lines to see which deprecated API's we are using in our code
+// You can control model vs ui and dylibs vs plugin separately - see the other xcconfig files
+//GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES
+//GCC_TREAT_WARNINGS_AS_ERRORS = NO  
+
+// To build "just like the pro's do" in the build room, uncomment the following line
+//#include "_shared_build_settings/buildroom_additions.xcconfig"
+

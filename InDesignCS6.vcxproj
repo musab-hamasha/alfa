@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release_CS3|Win32">
+      <Configuration>Release_CS3</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_CS4|Win32">
+      <Configuration>Release_CS4</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_CS5.5|Win32">
+      <Configuration>Release_CS5.5</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_CS5|Win32">
+      <Configuration>Release_CS5</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_CS6|Win32">
+      <Configuration>Release_CS6</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>alfa</ProjectName>
+    <ProjectGuid>{F07ADB1C-34E3-41F6-9BA9-D6C97E54FBD0}</ProjectGuid>
+    <RootNamespace>DocWatch</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="SDKPath_CS6.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="SDKPath_CS3.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="SDKPath_CS4.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="SDKPath_CS5.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="SDKPath_CS5.5.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">C:\ASE\fo_ew\runtime\lib\win32\InDesign\CS5.5\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">..\Build\InDesign\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">C:\ASE\fo_ew\runtime\lib\win32\InDesign\CS5\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">..\Build\InDesign\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">$(SolutionDir)..\Build\$(SolutionName)$(Configuration)\InDesign\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">$(SolutionDir)..\Build\$(SolutionName)$(Configuration)\InDesign\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">$(SolutionDir)..\Build\$(SolutionName)$(Configuration)\InDesign\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">$(SolutionDir)..\Build\$(SolutionName)$(Configuration)\InDesign\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">C:\ASE\fo_ew\runtime\lib\win32\InDesign\CS6\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">..\Build\InDesign\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">false</GenerateManifest>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">C:\Program Files (x86)\Adobe\Adobe InDesign CS6 Plugin SDK\devtools\bin;$(ExecutablePath)</ExecutablePath>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">$(ProjectName)</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">.pln</TargetExt>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">C:\Program Files (x86)\Adobe\Adobe InDesign CS4 SDK\devtools\bin;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">C:\Program Files %28x86%29\Adobe\Adobe InDesign CS5.5 SDK\devtools\bin;$(ExecutablePath)</ExecutablePath>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">.pln</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">.pln</TargetExt>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">C:\Program Files %28x86%29\Adobe\Adobe InDesign CS5 SDK\devtools\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">
+    <ExtensionsToDeleteOnClean>*.sdf;$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">
+    <BuildLog>
+      <Path>$(IntDir)BuildLog.htm</Path>
+    </BuildLog>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\objR_CS4\DocWatch.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg %40SDKCPPOptions5.5.rsp %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_SECURE_SCL=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;NO_STRICT;WINOS;_LOG;IND_PLUGIN;_WINDOWS;CS5;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)InDesign5_5.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <XMLDocumentationFileName>$(IntDir)</XMLDocumentationFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4005;4800;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ResourceOutputFileName>$(IntDir)DocWch.res</ResourceOutputFileName>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>del /f /s "$(TargetDir)($(TargetName) Resources)\"*.idrc &gt;nul &amp;&amp; xcopy /S "$(IntDir)"*.idrc "$(TargetDir)($(TargetName) Resources)\" /Y &gt;nul</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalOptions>/IGNORE:4089 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>PMRuntime.lib;Public.lib;WidgetBin.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>C:\ASE\fo_ew\runtime\lib\win32\InDesign\CS5.5\alfa.pln</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(ID_SDK_DIR)\build\win\objr;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ManifestFile>
+      </ManifestFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(IntDir)DocWatch.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo Copy PlugIn to 2014.1...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2014.1\runtime\lib\win32\InDesign\CS5.5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2014.1\runtime\lib\win32\InDesign\CS5.5" /Y &gt;nul
+
+echo Copy PlugIn to 2014.2...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2014.2\runtime\lib\win32\InDesign\CS5.5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2014.2\runtime\lib\win32\InDesign\CS5.5" /Y &gt;nul
+
+echo Copy PlugIn to 2014.3...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2014.3\runtime\lib\win32\InDesign\CS5.5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2014.3\runtime\lib\win32\InDesign\CS5.5" /Y &gt;nul
+
+echo Copy PlugIn to 2015.1...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.1\runtime\lib\win32\InDesign\CS5.5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.1\runtime\lib\win32\InDesign\CS5.5" /Y &gt;nul
+
+echo Copy PlugIn to 2015.2...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.2\runtime\lib\win32\InDesign\CS5.5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.2\runtime\lib\win32\InDesign\CS5.5" /Y &gt;nul
+
+echo Copy PlugIn to 2015.3...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.3\runtime\lib\win32\InDesign\CS5.5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.3\runtime\lib\win32\InDesign\CS5.5" /Y &gt;nul
+
+echo Copy PlugIn to 2016.1...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.1\runtime\lib\win32\InDesign\CS5.5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.1\runtime\lib\win32\InDesign\CS5.5" /Y &gt;nul
+
+echo Copy PlugIn to 2016.2...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.2\runtime\lib\win32\InDesign\CS5.5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.2\runtime\lib\win32\InDesign\CS5.5" /Y &gt;nul
+
+</Command>
+      <Message>Copy PlugIn -&gt; runtime/lib/win32/InDesign/CS5.5</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">
+    <BuildLog>
+      <Path>$(IntDir)BuildLog.htm</Path>
+    </BuildLog>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\indpugin\DocWatch.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg %40"SDKCPPOptions5.rsp" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_SECURE_SCL=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;NO_STRICT;WINOS;_LOG;IND_PLUGIN;_WINDOWS;CS5;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)InDesign5.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <XMLDocumentationFileName>$(IntDir)</XMLDocumentationFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4800;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ResourceOutputFileName>$(IntDir)DocWch.res</ResourceOutputFileName>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>del /f /s "$(TargetDir)($(TargetName) Resources)\"*.idrc &gt;nul &amp;&amp; xcopy /S "$(IntDir)"*.idrc "$(TargetDir)($(TargetName) Resources)\" /Y &gt;nul</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>PMRuntime.lib;Public.lib;WidgetBin.lib;msvcrt.lib;oldnames.lib;msvcprt.lib;msvcmrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>C:\ASE\fo_ew\runtime\lib\win32\InDesign\CS5\alfa.pln</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(ID_SDK_DIR)\build\win\objr;$(ProjectDir)\msvc90libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ManifestFile>
+      </ManifestFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(IntDir)DocWatch.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo Copy PlugIn to 2014.1...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2014.1\runtime\lib\win32\InDesign\CS5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2014.1\runtime\lib\win32\InDesign\CS5" /Y &gt;nul
+
+echo Copy PlugIn to 2014.2...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2014.2\runtime\lib\win32\InDesign\CS5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2014.2\runtime\lib\win32\InDesign\CS5" /Y &gt;nul
+
+echo Copy PlugIn to 2014.3...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2014.3\runtime\lib\win32\InDesign\CS5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2014.3\runtime\lib\win32\InDesign\CS5" /Y &gt;nul
+
+echo Copy PlugIn to 2015.1...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.1\runtime\lib\win32\InDesign\CS5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.1\runtime\lib\win32\InDesign\CS5" /Y &gt;nul
+
+echo Copy PlugIn to 2015.2...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.2\runtime\lib\win32\InDesign\CS5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.2\runtime\lib\win32\InDesign\CS5" /Y &gt;nul
+
+echo Copy PlugIn to 2015.3...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.3\runtime\lib\win32\InDesign\CS5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.3\runtime\lib\win32\InDesign\CS5" /Y &gt;nul
+
+echo Copy PlugIn to 2016.1...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.1\runtime\lib\win32\InDesign\CS5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.1\runtime\lib\win32\InDesign\CS5" /Y &gt;nul
+
+echo Copy PlugIn to 2016.2...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.2\runtime\lib\win32\InDesign\CS5\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.2\runtime\lib\win32\InDesign\CS5" /Y &gt;nul
+
+
+</Command>
+      <Message>Copy PlugIn -&gt; runtime/lib/win32/InDesign/CS5</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">
+    <BuildLog>
+      <Path>$(SolutionDir)..\Build\$(SolutionName)$(Configuration)\InDesign\\BuildLog.htm</Path>
+    </BuildLog>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\indpugin\DocWatch.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg %40"SDKCPPOptions4.rsp" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_SECURE_SCL=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;NO_STRICT;WINOS;_LOG;IND_PLUGIN;_WINDOWS;CS4;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\DocWatch.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\</AssemblerListingLocation>
+      <ObjectFileName>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\</ProgramDataBaseFileName>
+      <XMLDocumentationFileName>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\</XMLDocumentationFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4800;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ResourceOutputFileName>$(IntDir)DocWch.res</ResourceOutputFileName>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>"$(ID_SDK_DIR)\devtools\bin\merge_res.cmd" $(IntDir) DocWch</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>PMRuntime.lib;Public.lib;WidgetBin.lib;msvcprt.lib;msvcrt.lib;oldnames.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>C:\ASE\fo_ew\runtime\lib\win32\InDesign\CS4\alfa.pln</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(ID_SDK_DIR)\build\win\objr;$(ProjectDir)\msvc80libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ManifestFile>
+      </ManifestFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\DocWatch.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>"$(ID_SDK_DIR)\devtools\bin\restore_res.cmd" $(IntDir) DocWch</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">
+    <BuildLog>
+      <Path>$(SolutionDir)..\Build\$(SolutionName)$(Configuration)\InDesign\\BuildLog.htm</Path>
+    </BuildLog>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\indpugin\DocWatch.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg %40"SDKCPPOptions3.rsp"
+/D "_MSC_VER=1400" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_SECURE_SCL=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;NO_STRICT;WINOS;_LOG;IND_PLUGIN;_WINDOWS;CS_3;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\DocWatch.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\</AssemblerListingLocation>
+      <ObjectFileName>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\</ProgramDataBaseFileName>
+      <XMLDocumentationFileName>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\</XMLDocumentationFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4800;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ResourceOutputFileName>$(IntDir)DocWch.res</ResourceOutputFileName>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>"$(ID_SDK_DIR)\devtools\bin\merge_res.cmd" $(IntDir) DocWch</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>PMRuntime.lib;Public.lib;WidgetBin.lib;msvcprt.lib;msvcrt.lib;oldnames.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>C:\ASE\fo_ew\runtime\lib\win32\InDesign\CS3\alfa.pln</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(ID_SDK_DIR)\build\win\objr;$(ProjectDir)\msvc80libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ManifestFile>
+      </ManifestFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(SolutionDir)\..\Build\$(SolutionName)$(Configuration)\InDesign\DocWatch.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>"$(ID_SDK_DIR)\devtools\bin\restore_res.cmd" $(IntDir) DocWch</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">
+    <BuildLog>
+      <Path>$(IntDir)BuildLog.htm</Path>
+    </BuildLog>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\objR_CS4\DocWatch.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg %40SDKCPPOptions6.rsp   %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_SECURE_SCL=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;NO_STRICT;WINOS;_LOG;IND_PLUGIN;_WINDOWS;CS5;CS6;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)InDesign6.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <XMLDocumentationFileName>$(IntDir)</XMLDocumentationFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4005;4800;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ResourceOutputFileName>$(IntDir)DocWch.res</ResourceOutputFileName>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>del /f /s "$(TargetDir)($(TargetName) Resources)\"*.idrc &gt;nul &amp;&amp; xcopy /S "$(IntDir)"*.idrc "$(TargetDir)($(TargetName) Resources)\" /Y &gt;nul</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalOptions>/IGNORE:4089 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>PMRuntime.lib;Public.lib;WidgetBin.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>C:\ASE\fo_ew\runtime\lib\win32\InDesign\CS6\alfa.pln</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(ID_SDK_DIR)\build\win\objr;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ManifestFile>
+      </ManifestFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(IntDir)DocWatch.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo Copy PlugIn to 2015.1...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.1\runtime\lib\win32\InDesign\CS6\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.1\runtime\lib\win32\InDesign\CS6" /Y &gt;nul
+
+echo Copy PlugIn to 2015.2...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.2\runtime\lib\win32\InDesign\CS6\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.2\runtime\lib\win32\InDesign\CS6" /Y &gt;nul
+
+echo Copy PlugIn to 2015.3...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2015.3\runtime\lib\win32\InDesign\CS6\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2015.3\runtime\lib\win32\InDesign\CS6" /Y &gt;nul
+
+echo Copy PlugIn to 2016.1...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.1\runtime\lib\win32\InDesign\CS6\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.1\runtime\lib\win32\InDesign\CS6" /Y &gt;nul
+
+echo Copy PlugIn to 2016.2...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.2\runtime\lib\win32\InDesign\CS6\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.2\runtime\lib\win32\InDesign\CS6" /Y &gt;nul
+
+echo Copy PlugIn to 2016.3...
+xcopy "$(TargetDir)($(TargetName) Resources)\*.idrc" "C:\ASE\fo_2016.3\runtime\lib\win32\InDesign\CS6\($(TargetName) Resources)\" /E /Y &gt;nul
+xcopy "$(TargetDir)$(TargetName).pln" "C:\ASE\fo_2016.3\runtime\lib\win32\InDesign\CS6" /Y &gt;nul
+
+
+
+</Command>
+      <Message>Copy PlugIn -&gt; runtime/lib/win32/InDesign/CS6</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="sdk6\PlugInStatics.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sdk6\SDKFileHelper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sdk6\SDKLayoutHelper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\AdDocPI.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\AppQuitObserver.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\DocMgr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\DocResources.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\DocWchActionComponent.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Disabled</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\DocWchDocFileHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\DocWchID.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Disabled</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Disabled</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Use</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Disabled</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\DocWchNoStrip.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\DragAndDropHelper.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\ErrorCheckingLogging.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\Functions.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\FrameUtils.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\ImageLinkUtils.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\IndComm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\JavascriptHelper.cpp" />
+    <ClCompile Include="src\Main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\PathAux.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\PluginConfiguration.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\PluginConfigurationImpl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\SuppUISuppressedUI.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\TriggerResourceDeps.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Disabled</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">MinSpace</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">NDEBUG;_SCL_SECURE_NO_DEPRECATE;NO_STRICT;_CRT_SECURE_NO_DEPRECATE;WINOS;_WINDOWS</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">
+      </PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">MinSpace</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">NDEBUG;_SCL_SECURE_NO_DEPRECATE;NO_STRICT;_CRT_SECURE_NO_DEPRECATE;WINOS;_WINDOWS</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\UnifiedAux.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\XMLConfigSAXContentHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\XMLConfigurationReader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="sdk5\PlugInStatics.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sdk5\SDKFileHelper.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sdk5\SDKLayoutHelper.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">precompiled.h</PrecompiledHeaderFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\common\CMyStream.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\PluginLogger.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\CMyStream.h" />
+    <ClInclude Include="..\common\idkeys.h" />
+    <ClInclude Include="..\common\idtypes.h" />
+    <ClInclude Include="..\common\PluginLogger.h" />
+    <ClInclude Include="src\AdDocPI.h" />
+    <ClInclude Include="src\DocMgr.h" />
+    <ClInclude Include="src\DocResources.h" />
+    <ClInclude Include="src\DocumentUIID.h" />
+    <ClInclude Include="src\DocWchFactoryList.h" />
+    <ClInclude Include="src\DocWchID.h" />
+    <ClInclude Include="src\ErrorCheckingLogging.h" />
+    <ClInclude Include="..\include\Functions.h" />
+    <ClInclude Include="src\FrameUtils.h" />
+    <ClInclude Include="src\ImageLinkUtils.h" />
+    <ClInclude Include="src\IndComm.h" />
+    <ClInclude Include="src\ISelSuite.h" />
+    <ClInclude Include="src\PathAux.h" />
+    <ClInclude Include="src\PluginConfiguration.h" />
+    <ClInclude Include="src\PluginConfigurationImpl.h" />
+    <ClInclude Include="src\precompiled.h" />
+    <ClInclude Include="src\SuppUISuppressedUI.h" />
+    <ClInclude Include="src\UnifiedAux.h" />
+    <ClInclude Include="src\XMLConfigSAXContentHandler.h" />
+    <ClInclude Include="src\XMLConfigurationReader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\DocWch.fr">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">odfrc "%(FullPath)" -o "$(IntDir)%(Filename).fres"   -i .\docwatch %40SDKODFRCOptions3.rsp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">$(IntDir)%(Filename).fres;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">odfrc "%(FullPath)" -o "$(IntDir)%(Filename).fres"   -i .\docwatch %40SDKODFRCOptions4.rsp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">$(IntDir)%(Filename).fres;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">odfrc "%(FullPath)" -o "$(IntDir)%(Filename).fres"   -i .\docwatch %40SDKODFRCOptions5.5.rsp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">$(IntDir)%(Filename).fres;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">odfrc "%(FullPath)" -o "$(IntDir)%(Filename).fres"   -i .\docwatch %40SDKODFRCOptions5.rsp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">$(IntDir)%(Filename).fres;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">odfrc "%(FullPath)" -o "$(IntDir)%(Filename).fres"   -i .\docwatch %40SDKODFRCOptions6.rsp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">$(IntDir)%(Filename).fres;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\DocWch.rc">
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">0x0809</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release_CS3|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">0x0809</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release_CS4|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">CS5;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">0x0809</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release_CS5.5|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">CS5;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">0x0809</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release_CS5|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">CS5;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">0x0809</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release_CS6|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4b89ea97-d16d-43a2-9c55-c2b70f14eb8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0bd3f2ef-2aeb-441d-8088-11e52ae82df6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{509ad68c-1513-432a-aa03-a988ece72a10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{9288e5a9-8a69-4e05-ba1a-680e183df00d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\Header">
+      <UniqueIdentifier>{6793f668-12a9-40a2-9104-2d2527e908ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\Source">
+      <UniqueIdentifier>{2e3dc284-36d1-4f57-bee9-8ae1018cd22b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ReadMe">
+      <UniqueIdentifier>{64e31e29-54df-414f-a962-33628fda4138}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sdk6">
+      <UniqueIdentifier>{740aa9f1-5566-4579-bc26-35093ec885d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sdk5">
+      <UniqueIdentifier>{22b7336a-e623-4c03-b81b-6008934c4784}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AdDocPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AppQuitObserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DocMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DocResources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DocWchActionComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DocWchDocFileHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DocWchID.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DocWchNoStrip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DragAndDropHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ErrorCheckingLogging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FrameUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImageLinkUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IndComm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PathAux.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PluginConfiguration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PluginConfigurationImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\precompiled.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SuppUISuppressedUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TriggerResourceDeps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UnifiedAux.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XMLConfigSAXContentHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XMLConfigurationReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\CMyStream.cpp">
+      <Filter>common\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\PluginLogger.cpp">
+      <Filter>common\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk6\SDKLayoutHelper.cpp">
+      <Filter>Source Files\sdk6</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk6\SDKFileHelper.cpp">
+      <Filter>Source Files\sdk6</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk5\PlugInStatics.cpp">
+      <Filter>Source Files\sdk5</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk5\SDKFileHelper.cpp">
+      <Filter>Source Files\sdk5</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk5\SDKLayoutHelper.cpp">
+      <Filter>Source Files\sdk5</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk6\PlugInStatics.cpp">
+      <Filter>Source Files\sdk6</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JavascriptHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AdDocPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DocMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DocResources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DocumentUIID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DocWchFactoryList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DocWchID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ErrorCheckingLogging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FrameUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImageLinkUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IndComm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ISelSuite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PathAux.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PluginConfiguration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PluginConfigurationImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\precompiled.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SuppUISuppressedUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UnifiedAux.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\XMLConfigSAXContentHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\XMLConfigurationReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\CMyStream.h">
+      <Filter>common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\idkeys.h">
+      <Filter>common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\PluginLogger.h">
+      <Filter>common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\idtypes.h">
+      <Filter>common\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt">
+      <Filter>ReadMe</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\DocWch.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\DocWch.fr">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

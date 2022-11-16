@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\common\Functions.cpp" />
+    <ClCompile Include="src\AdDocPI.cpp" />
+    <ClCompile Include="src\AppQuitObserver.cpp" />
+    <ClCompile Include="src\DocMgr.cpp" />
+    <ClCompile Include="src\DocResources.cpp" />
+    <ClCompile Include="src\DocWchActionComponent.cpp" />
+    <ClCompile Include="src\DocWchDocFileHandler.cpp" />
+    <ClCompile Include="src\DocWchID.cpp" />
+    <ClCompile Include="src\DocWchNoStrip.cpp" />
+    <ClCompile Include="src\DragAndDropHelper.cpp" />
+    <ClCompile Include="src\ErrorCheckingLogging.cpp" />
+    <ClCompile Include="src\FrameUtils.cpp" />
+    <ClCompile Include="src\ImageLinkUtils.cpp" />
+    <ClCompile Include="src\IndComm.cpp" />
+    <ClCompile Include="src\MacPathUtils.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\PathAux.cpp" />
+    <ClCompile Include="src\PluginConfiguration.cpp" />
+    <ClCompile Include="src\PluginConfigurationImpl.cpp" />
+    <ClCompile Include="src\precompiled.cpp" />
+    <ClCompile Include="src\SuppUISuppressedUI.cpp" />
+    <ClCompile Include="src\TriggerResourceDeps.cpp" />
+    <ClCompile Include="src\UnifiedAux.cpp" />
+    <ClCompile Include="src\XMLConfigSAXContentHandler.cpp" />
+    <ClCompile Include="src\XMLConfigurationReader.cpp" />
+    <ClCompile Include="..\common\CMyStream.cpp">
+      <Filter>common\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\PluginLogger.cpp">
+      <Filter>common\Source</Filter>
+    </ClCompile>
+   <ClCompile Include="sdk2021\PlugInStatics.cpp">
+      <Filter>Source Files\sdk2021</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk2021\SDKFileHelper.cpp">
+      <Filter>Source Files\sdk2021</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk2021\SDKLayoutHelper.cpp">
+      <Filter>Source Files\sdk2021</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JavascriptHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{73011380-b693-478a-ba37-39597f5ee008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\Header">
+      <UniqueIdentifier>{0b4eb4b0-727f-4f54-afaa-003e4775b04d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\Source">
+      <UniqueIdentifier>{5c65d69b-055e-4091-bc1a-fc2f01bfdd69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{9cd1877c-e67f-4bde-a3a3-6a0b9439b418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b88dc398-2894-43ca-8972-e33a53070d73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sdk2021">
+      <UniqueIdentifier>{27b0c3cd-ad7b-41cb-a950-52d79de87052}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\CMyStream.h">
+      <Filter>common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\PluginLogger.h">
+      <Filter>common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\idkeys.h">
+      <Filter>common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\idtypes.h">
+      <Filter>common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChangeVariableInfo.h">
+      <Filter>common\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\DocWch.fr">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\DocWch.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
